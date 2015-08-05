@@ -1,0 +1,307 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+
+html {
+	font-size: 16px;
+}
+
+
+body {
+	color: #111;
+	font-family: 'Rosario', Helvetica, Arial, sans-serif;
+	background: rgb(236, 240, 241) url('images/dark_embroidery.png');
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	background:rgba(236, 240, 241,.6);
+}
+
+h2, h3 {
+	font-family: 'Lora', serif;
+}
+
+h1, a {
+	font-family: 'Belleza', sans-serif;
+}
+
+h1 {
+	font-size: 2.25rem;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+p {
+	line-height: 1.75;
+	letter-spacing: 1px;
+}
+
+a {
+	letter-spacing:3px;
+	font-weight: 700;
+	transition: all .75s;
+}
+
+h2, .menu a:hover, .subtitle a:hover, .attribution a:hover, .mail p:hover {
+	text-shadow: 1px 1px 8px rgba(255,255,255,1);
+	background: rgba(236, 240, 241,.5);
+	box-shadow: inset 1px 1px 25px rgba(236, 240, 241,.5);
+	border-radius: 25px;
+}
+
+section, footer {
+	margin: 20px;
+	padding: 0 5%;
+}
+
+
+
+/* MENU
+-----------------------------------------*/
+nav {
+	width: 100%;
+	margin:0 auto;
+}
+
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.menu ul {
+	padding:0;
+	margin:0;	
+}
+
+.menu li {
+	display: inline-block;	
+	width:30%;
+	height:40px;
+}
+
+.menu a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #111;
+	letter-spacing:7px;
+	display:inline-block;
+	width:100%;
+	height:100%;
+	padding-top: 10px;
+
+}
+
+.menu a:hover {
+	font-weight:bold;	
+	letter-spacing: 10px;
+}
+
+/* BANNER 
+-----------------------------------------*/
+
+header {
+	background: no-repeat bottom/100% url('images/typewriter-black-white-szolkin.jpg');
+	height:500px;
+}
+
+
+.tagline {
+	padding: 10% 5%;
+}
+
+.tagline h1, .tagline h3 {
+	letter-spacing: 2px;
+	text-shadow: 4px 4px 20px #000;
+	color: whitesmoke;
+	text-align: right;
+}
+
+/* ABOUT
+-----------------------------------------*/
+
+.about h2, .portfolio h2 {
+	text-align: center;
+}
+
+
+.about p:last-child {
+	border-bottom: 1px solid #222;	
+	padding-bottom: 50px;
+}
+
+
+/*PORTFOLIO
+-----------------------------------------*/
+
+.project {
+	float:left;
+	width: 32%;
+	position:relative;
+}
+
+.projects a, .attribution a {
+	text-decoration: none;
+	color: #222;
+	padding: 2px 5px;
+}
+
+
+
+.project h3 {
+	text-align: center;
+}
+
+.project2 {
+	margin:0 20px;
+}
+
+p.subtitle {
+	font-weight: bold;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #222;
+	text-align: center;
+}
+
+
+
+/* CONTACT 
+-----------------------------------------*/
+.contactInfo {
+	text-align: center;
+	border-top: 1px solid #222;
+}
+
+.headshot, .contact2 {
+	float:left;
+	width:50%;
+} 
+
+.mail img, .mail p, .phone img, .phone p {
+	float:left;
+	padding: 2%;
+}
+
+.mail p {
+	transition: all .75s;
+	border-radius: 15px;
+}
+
+.mail, .phone {
+	width:100%;
+	padding-bottom:5%;
+}
+
+.mail img, .phone img {
+	max-width:75px;
+}
+
+.mail a {
+	text-decoration: none;
+	color: #222;
+	font-size: 1.5rem;
+	width: 100%;
+}
+
+.phone {
+	clear:both;
+}
+
+.phone p {
+	font-size: 1.5rem;
+	line-height:1;
+	font-weight:bold;
+}
+
+.text {
+	display: inline-block;
+	padding-top:15px;
+}
+
+.headshot {
+	padding:2%;	
+}
+
+.headshot img {
+	margin-right: 10px;
+	border-radius: 7px;
+	box-shadow: 1px 1px 10px #222;
+	float:right;
+}
+
+.contact1 {
+	width:100%;
+	margin-left: 10px;
+}
+
+.socialIcons {
+	width: 60%;
+	clear:both;
+	margin: 5px auto 0;
+}
+
+.icon {
+	display:inline-block;
+	width:30%;
+}
+
+.icon a {
+	margin: 5px auto;
+	display:inline-block;
+	padding:10px;
+	border-radius: 15px;
+}
+
+
+.icon img {
+	max-width:75px;
+}
+
+
+.icon a:hover {
+	background: rgba(236, 240, 241,.5);
+	box-shadow: inset 15px 15px 25px rgba(236, 240, 241,.5);
+	border-radius: 15px;
+}
+
+
+
+
+
+/*  FOOTER
+---------------------------------------*/
+
+footer {
+	text-align: center;
+	color: #000;
+	margin-bottom: 0;
+}
+
+footer p {
+	font-size: 12px;
+}
+
+.attribution {
+	border-top: 1px solid #222;
+	padding: 20px;	
+}
+
+
+
